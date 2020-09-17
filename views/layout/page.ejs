@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/vendor/bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+	<title><%= blocks.title %></title>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="/" id="navMain" class="navChild">Головна</a>
+			<a href="/countchance" id="navMain" class="navChild">Оцінити ШАНС</a>
+			<a href="/findvuz" id="navFindVuzi" class="navChild">Пошук ВНЗ</a>
+			<a href="/aboutus" id="navAboutUs" class="navChild">Про нас</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="mainSection">
+			
+			<%- body %>
+		</section>
+	</main>
+
+	<footer>
+		<div class="copyright">©Abithelper</div>
+	</footer>
+	<script src="../../js/template.js" type="text/javascript"></script>
+</body>
+</html>

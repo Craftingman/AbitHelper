@@ -1,0 +1,38 @@
+<% layout("./layout/page");-%>
+<% block('title', 'Оцінити мій ШАНС'); -%>
+
+<script src="/js/countchance.js" type="text/javascript"></script>
+
+<section class="inputParametersSection">
+	<div class="inputParameters">
+		<h1><%= blocks.title %></h1>
+		<div id="specSelectBlock" class="selectBlock">
+			<div id="specSelectTitle" class="selectTitle">Вкажіть спеціальність: </div>
+			<select id="specSelect" class="formSelect"></select>
+		</div>
+		<div id="regionSelectBlock" class="selectBlock">
+			<div class="selectTitle">Оберіть регіон: </div>
+			<select id="regionSelect" class="formSelect"></select>
+		</div>
+		<div id="regionSelectBlock" class="selectBlock">
+			<div class="selectTitle">Ваш середній бал ЗНО: </div>
+			<input type="text" class="formInput" id="znoInput"/>
+		</div>
+		<input type="button" value="ПОШУК" onclick="formKonkursTable()" id="searchVuziButton">
+	</div>
+</section>
+
+<section class="resultTableSection">
+	<div class="loadingImg">Loading...</div>
+	<div class="tableBlock">
+		<table class="resultTable" id="resultTable">
+			<tr class="headTr">
+				<td>Спеціальність</td>
+				<td>Регіон</td>
+				<td>Назва закладу</td>
+				<td>Форма навчання</td>
+			</tr>
+		</table>
+	</div>
+</section>
+

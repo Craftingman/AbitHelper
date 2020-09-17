@@ -1,0 +1,28 @@
+<% layout("./layout/page");-%>
+<% block('title', 'Пошук ВНЗ'); -%>
+
+<script src="/js/findvuzi.js" type="text/javascript"></script>
+
+<section class="inputParametersSection">
+	<div class="inputParameters">
+		<h1><%= blocks.title %></h1>
+		<div id="regionSelectBlock" class="selectBlock">
+			<div id="regionSelectTitle" class="selectTitle">Оберіть регіон: </div>
+			<select id="regionSelect" class="formSelect"></select>
+		</div>
+		<input type="button" value="ПОШУК" onclick="formResultTable()" id="searchVuziButton">
+	</div>
+</section>
+<section class="resultTableSection">
+	<div class="tableBlock">
+		<table class="resultTable" id="resultTable">
+			<tr class="headTr">
+				<td>Назва закладу</td>
+				<td>Вид закладу</td>
+				<td>Тип закладу</td>
+				<td>Форма власності</td>
+				<td>Населенний пункт</td>
+			</tr>
+		</table>
+	</div>
+</section>
