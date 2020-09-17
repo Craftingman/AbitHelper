@@ -9,4 +9,4 @@ Choose the university in the table and click the button which has appeared. Bing
 The demonstration of "AbitHelper" you can see by ***clicking the image***: <br><br> [!["AbitHelper" DEMO](https://img.youtube.com/vi/B8XbLZcgVuQ/0.jpg)](https://www.youtube.com/watch?v=B8XbLZcgVuQ)
 ## Authors
 Code by **Victor Zherebniy**: https://github.com/Craftingman<br>
-Design by **Anastasia Martynenko**: https://www.instagram.com/naston.martin/
+Design by **Anastasia Martinenko**: https://www.instagram.com/naston.martin/
