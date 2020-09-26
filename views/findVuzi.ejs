@@ -8,7 +8,12 @@
 		<h1><%= blocks.title %></h1>
 		<div id="regionSelectBlock" class="selectBlock">
 			<div id="regionSelectTitle" class="selectTitle">Оберіть регіон: </div>
-			<select id="regionSelect" class="formSelect"></select>
+			<div class="dropdownSearch" id="regionDropdown">
+				<input type="text" class="dropdownInput">
+				<div class="dropdownResultsBox">
+
+				</div>
+			</div>
 		</div>
 		<input type="button" value="ПОШУК" onclick="formResultTable()" id="searchVuziButton">
 	</div>

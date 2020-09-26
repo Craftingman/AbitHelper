@@ -8,15 +8,25 @@
 		<h1><%= blocks.title %></h1>
 		<div id="specSelectBlock" class="selectBlock">
 			<div id="specSelectTitle" class="selectTitle">Вкажіть спеціальність: </div>
-			<select id="specSelect" class="formSelect"></select>
+			<div class="dropdownSearch" id="specDropdown">
+				<input type="text" class="dropdownInput">
+				<div class="dropdownResultsBox">
+
+				</div>
+			</div>
 		</div>
 		<div id="regionSelectBlock" class="selectBlock">
 			<div class="selectTitle">Оберіть регіон: </div>
-			<select id="regionSelect" class="formSelect"></select>
+			<div class="dropdownSearch" id="regionDropdown">
+				<input type="text" class="dropdownInput">
+				<div class="dropdownResultsBox">
+
+				</div>
+			</div>
 		</div>
-		<div id="regionSelectBlock" class="selectBlock">
+		<div id="znoInputBlock" class="selectBlock">
 			<div class="selectTitle">Ваш середній бал ЗНО: </div>
-			<input type="text" class="formInput" id="znoInput"/>
+			<input type="text" class="dropdownInput" id="znoInput"/>
 		</div>
 		<input type="button" value="ПОШУК" onclick="formKonkursTable()" id="searchVuziButton">
 	</div>
