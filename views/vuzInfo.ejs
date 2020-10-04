@@ -1,0 +1,95 @@
+<% layout("./layout/page");-%>
+<% block('title', 'Пошук ВНЗ'); -%>
+
+<script>
+	
+</script>
+<div class="vuzInfo">
+	<h1><%= vuz.name %></h1>
+	<table>
+		<tr>
+			<td class="name">Вид закладу освіти: </td>
+			<td>
+			<% if(vuz.vuzFamily) { %>
+				<%= vuz.vuzFamily %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Тип закладу освіти: </td>
+			<td>
+			<% if(vuz.vuzType) { %>
+				<%= vuz.vuzType %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Форма власності: </td>
+			<td>
+			<% if(vuz.ownForm) { %>
+				<%= vuz.ownForm %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Населений пункт: </td>
+			<td>
+			<% if(vuz.cityFact) { %>
+				<%= vuz.cityFact %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Адреса: </td>
+			<td>
+			<% if(vuz.adressFact) { %>
+				<%= vuz.adressFact %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Телефон: </td>
+			<td>
+			<% if(vuz.phoneNum) { %>
+				<%= vuz.phoneNum %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Електронна пошта: </td>
+			<td>
+			<% if(vuz.email) { %>
+				<%= vuz.email %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+		<tr>
+			<td class="name">Вебсайт: </td>
+			<td>
+			<% if(vuz.website) { %>
+			 	<% if( vuz.website.startsWith("http") ) { %>
+			 		<a href="<%= vuz.website %>"><%= vuz.website %></a>
+			 	<% } else { %>
+			 		<a href="http://<%= vuz.website %>"><%= vuz.website %></a>
+			 	<% } %>
+			<% } else { %>
+				-
+			<% } %>
+			</td>
+		</tr>
+	</table>
+</div>

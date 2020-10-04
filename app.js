@@ -57,6 +57,23 @@ app.get("/aboutus", function(req, res, next) {
   res.render("aboutus", {});
 });
 
+app.get("/vuzi/:vuzCode", function(req, res, next) {
+  const vuzCode = req.params["vuzCode"];
+  const collection = app.locals.db.collection('vuzi');
+  let vuz = {};
+
+  collection.find({ code: Number.parseInt(vuzCode) }).toArray( function(err, results){
+        if(err) return console.log(err);
+        vuz = results[0];
+        if(vuz) {
+          res.render("vuzInfo", { vuz: vuz });
+        } else {
+          res.status(404).send("404 Page not found");
+        }
+  });
+
+});
+
 app.get("/api/specs", function(req, res, next) {
 
   let params = req.query;
@@ -339,7 +356,7 @@ app.get("/api/konkurs", function(req, res, next) {
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  res.send(404, "404 Page not found");
+  res.status(404).send("404 Page not found");
 });
 
 app.use(function(err, req, res, next) {

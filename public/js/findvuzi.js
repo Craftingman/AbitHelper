@@ -52,6 +52,10 @@ function formResultTable() {
 
 			$("#resultTable").css("display", "table");
 
+			tr.on("click", function() {
+				$(location).attr('href', `/vuzi/${vuz.code}`);
+			});
+
 			$("#resultTable").append(tr);
 			$("#resultTable tr:odd").css("background", "#cee1c8");
 			$(".vuzTr").hover(function() {
